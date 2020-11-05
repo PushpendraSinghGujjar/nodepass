@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/stylesheets/style.css' />
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>  
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdn.ckeditor.com/4.15.0/standard/ckeditor.js"></script>
+  </head>
+  <body>
+
+    <nav class="navbar bg-dark text-white"> 
+        <div class="brand-name"><h1>Password Management</h1></div>
+        <ul class="nav justify-content-end">
+            <li class="nav-item" style="margin: 4px;">
+               <button type="button" class="btn btn-primary">
+                <a class="text-white" href="/" style="text-decoration: none;">Home</a>
+               </button> 
+            </li>
+            <li class="nav-item" style="margin: 4px;">
+                <div class="dropdown">                                                                <!-- basic dropdown -->
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                      Password Category
+                    </button>
+                    <div class="dropdown-menu">
+                      <a class="dropdown-item" href="/addNewCategory">Add New Category</a>
+                      <a class="dropdown-item" href="/passwordCategory">View All Category</a>
+                    </div>
+                </div>
+            </li>
+            <li class="nav-item" style="margin: 4px;">
+                <div class="dropdown">                                                                <!-- basic dropdown -->
+                    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+                       Password Details
+                    </button>
+                    <div class="dropdown-menu">  
+                      <a class="dropdown-item" href="/addNewPassword">Add New Password</a>
+                      <a class="dropdown-item" href="/viewAllPassword">View All Password</a>
+                    </div>
+                </div>
+            </li>
+            <li></li>
+          </ul>
+          <div class="navbar-header" style="float: right;">
+            <div class="dropdown drop-left">                                                                <!-- basic dropdown -->
+              <!-- <button type="button" class="btn dropdown bg-dark" style="width: 40%; border-radius: 100%;" data-toggle="dropdown"> -->
+                
+                <img class="profilepic dropdown"  src="/uploads/<%= image %>" data-toggle="dropdown">
+               
+                <!-- <i class="fa fa-user-circle-o fa-2x" aria-hidden="true"></i> -->
+              <!-- </button> -->
+              <div class="dropdown-menu dropdown-menu-right"> 
+              
+                 
+                <a class="dropdown-item" style="text-align: center;display: block;" href="#">
+                  <img src="/uploads/<%= image %>"  alt="pushpendra" class="profilepicdisplay">
+                  <br> 
+                  <p><b><% if(loginUser){ %> <%= loginUser %><% } %></b></p>
+                </a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" style="text-align: center;" href="/logout"><i class="fa fa-power-off"></i> Logout</a>
+                <div class="dropdown-divider"></div>
+                <a class="dropdown-item" style="text-align: center;" href="/developer"><i class="fa fa-handshake-o"></i>Developer's Corner</a>
+              </div>
+          </div>
+          </div>
+    </nav> 
+    
