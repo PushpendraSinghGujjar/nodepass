@@ -1,5 +1,5 @@
 const mongoose = require('mongoose');
-mongoose.connect('mongodb+srv://Pushpendra_1:Pushpendra@cluster0.olypp.mongodb.net/nodepass',{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
+mongoose.connect('mongodb+srv://Pushpendra_1:Pushpendra1@cluster0.olypp.mongodb.net/nodepass',{useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true });
 var conn =mongoose.Collection;
 var passSchema =new mongoose.Schema({
    password_category: {
